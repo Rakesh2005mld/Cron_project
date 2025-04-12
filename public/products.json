@@ -1,0 +1,314 @@
+[
+        {
+          "id": "1",
+          "category": "jacket",
+          "name": "Mens Winter Leathers Jackets",
+          "rating": 3,
+          "price": 899,
+          "originalPrice": 4000,
+          "images": [
+            "./assets/images/products/jacket-3.jpg",
+            "./assets/images/products/jacket-4.jpg"
+          ],
+          "badge": "15%",
+          "product-description": "Stylish and warm leather jacket perfect for winter. Offers comfort and durability with a classic look."
+        },
+        {
+          "id": "2",
+          "category": "shirt",
+          "name": "Pure Garment Dyed Cotton Shirt",
+          "rating": 3,
+          "price": 499,
+          "originalPrice": 999,
+          "images": [
+            "./assets/images/products/shirt-1.jpg",
+            "./assets/images/products/shirt-2.jpg"
+          ],
+          "badge": "sale",
+          "product-description": "Soft cotton shirt with garment-dyed finish for a vintage look. Ideal for everyday wear."
+        },
+        {
+          "id": "3",
+          "category": "jacket",
+          "name": "MEN Yarn Fleece Full-Zip Jacket",
+          "rating": 3,
+          "price": 589,
+          "originalPrice": 1299,
+          "images": [
+            "./assets/images/products/jacket-5.jpg",
+            "./assets/images/products/jacket-6.jpg"
+          ],
+          "product-description": "Comfortable fleece jacket with full-zip design. Keeps you warm during cold weather activities."
+        },
+        {
+          "id": "4",
+          "category": "skirt",
+          "name": "Black Floral Wrap Midi Skirt",
+          "rating": 5,
+          "price": 399,
+          "originalPrice": 399,
+          "images": [
+            "./assets/images/products/clothes-3.jpg",
+            "./assets/images/products/clothes-4.jpg"
+          ],
+          "badge": "new",
+          "product-description": "Elegant wrap skirt with floral prints. Perfect for casual outings and semi-formal events."
+        },
+        {
+          "id": "5",
+          "category": "casual",
+          "name": "Casual Men's Brown shoes",
+          "rating": 5,
+          "price": 999,
+          "originalPrice": 1199,
+          "images": [
+            "./assets/images/products/shoe-2.jpg",
+            "./assets/images/products/shoe-2_1.jpg"
+          ],
+          "product-description": "Classic brown shoes crafted for comfort and style. Perfect for casual day-to-day wear."
+        },
+        {
+          "id": "6",
+          "category": "watches",
+          "name": "Pocket Watch Leather Pouch",
+          "rating": 3,
+          "price": 299,
+          "originalPrice": 599,
+          "images": [
+            "./assets/images/products/watch-3.jpg",
+            "./assets/images/products/watch-4.jpg"
+          ],
+          "badge": "sale",
+          "product-description": "Vintage-inspired pocket watch with a premium leather pouch. A timeless fashion accessory."
+        },
+        {
+          "id": "7",
+          "category": "watches",
+          "name": "Smart watche Vital Plus",
+          "rating": 4,
+          "price": 1199,
+          "originalPrice": 10099,
+          "images": [
+            "./assets/images/products/watch-1.jpg",
+            "./assets/images/products/watch-2.jpg"
+          ],
+          "product-description": "Feature-rich smart watch with health tracking and notifications. Sleek design and durable build."
+        },
+        {
+          "id": "8",
+          "category": "party wear",
+          "name": "Womens Party Wear Shoes",
+          "rating": 3,
+          "price": 215,
+          "originalPrice": 3000,
+          "images": [
+            "./assets/images/products/party-wear-1.jpg",
+            "./assets/images/products/party-wear-2.jpg"
+          ],
+          "badge": "sale",
+          "product-description": "Elegant and stylish shoes perfect for parties and events. Comfortable fit with a sparkling finish."
+        },
+        {
+          "id": "9",
+          "category": "jacket",
+          "name": "Mens Winter Leathers Jackets",
+          "rating": 4,
+          "price": 899,
+          "originalPrice": 4000,
+          "images": [
+            "./assets/images/products/jacket-1.jpg",
+            "./assets/images/products/jacket-2.jpg"
+          ],
+          "product-description": "A rugged winter leather jacket offering warmth and a classic edge to your winter wardrobe."
+        },
+        {
+          "id": "10",
+          "category": "sports",
+          "name": "Trekking & Running Shoes - black",
+          "rating": 3,
+          "price": 519,
+          "originalPrice": 1299,
+          "images": [
+            "./assets/images/products/sports-2.jpg",
+            "./assets/images/products/sports-4.jpg"
+          ],
+          "badge": "sale",
+          "product-description": "Multi-purpose shoes built for trekking and running. Lightweight and built for performance."
+        },
+        {
+          "id": "11",
+          "category": "formal",
+          "name": "Men's Leather Formal Wear shoes",
+          "rating": 4,
+          "price": 500,
+          "originalPrice": 665,
+          "images": [
+            "./assets/images/products/shoe-1.jpg",
+            "./assets/images/products/shoe-1_1.jpg"
+          ],
+          "product-description": "Elegant leather formal shoes for men. Perfect choice for office, meetings, or events."
+        },
+        {
+            "id": "13",
+            "category": "clothes",
+            "name": "Relaxed Short full Sleeve T-Shirt",
+            "rating": 0,
+            "price": 405,
+            "originalPrice": 1002,
+            "images": ["./assets/images/products/clothes-1.jpg", "./assets/images/products/clothes-1.jpg"],
+            "product-description": "A soft, breathable cotton T-shirt with a relaxed fit. Ideal for everyday wear."
+          },
+          {
+            "id": "14",
+            "category": "clothes",
+            "name": "Girls pink Embro design Top",
+            "rating": 0,
+            "price": 601,
+            "originalPrice": 900,
+            "images": ["./assets/images/products/clothes-2.jpg", "./assets/images/products/clothes-2.jpg"],
+            "product-description": "Stylish embroidered pink top designed for comfort and a perfect festive look."
+          },
+          {
+            "id": "15",
+            "category": "sports",
+            "name": "Running & Trekking Shoes - White",
+            "rating": 0,
+            "price": 409,
+            "originalPrice": 1005,
+            "images": ["./assets/images/products/sports-1.jpg","./assets/images/products/sports-1.jpg"],
+            "product-description": "Durable white trekking shoes made for adventure with maximum grip and support."
+          },
+          {
+            "id": "16",
+            "category": "accessories",
+            "name": "Woolen Hat for Men",
+            "rating": 5,
+            "price": 1020,
+            "originalPrice": 10050,
+            "images": ["./assets/images/products/4.jpg", "./assets/images/products/4.jpg"],
+            "product-description": "Warm and stylish woolen hat designed for cold weather and street style."
+          },
+          {
+            "id": "17",
+            "category": "sports",
+            "name": "Sports Claw Women's Shoes",
+            "rating": 0,
+            "price": 504,
+            "originalPrice": 6005,
+            "images": ["./assets/images/products/sports-3.jpg", "./assets/images/products/sports-3.jpg"],
+            "product-description": "Lightweight and high-performance shoes built for intense athletic activity."
+          },
+          {
+            "id": "18",
+            "category": "sports",
+            "name": "Air Trekking Shoes - white",
+            "rating": 0,
+            "price": 502,
+            "originalPrice": 5005,
+            "images": ["./assets/images/products/sports-6.jpg", "./assets/images/products/sports-6.jpg"],
+            "product-description": "Air-cushioned trekking shoes that combine breathability and rugged traction."
+          },
+          {
+            "id": "19",
+            "category": "boots",
+            "name": "Boot With Suede Detail",
+            "rating": 0,
+            "price": 200,
+            "originalPrice": 3000,
+            "images": ["./assets/images/products/shoe-3.jpg", "./assets/images/products/shoe-3.jpg"],
+            "product-description": "Elegant boots with suede detailing perfect for casual and semi-formal wear."
+          },
+          {
+            "id": "20",
+            "category": "jewellery",
+            "name": "Silver Deer Heart Necklace",
+            "rating": 0,
+            "price": 804,
+            "originalPrice": 3000,
+            "images": ["./assets/images/products/jewellery-3.jpg", "./assets/images/products/jewellery-3.jpg"],
+            "product-description": "Romantic heart-shaped pendant with a deer design in sterling silver finish."
+          },
+          {
+            "id": "21",
+            "category": "perfume",
+            "name": "Titan 100 Ml Womens Perfume",
+            "rating": 0,
+            "price": 402,
+            "originalPrice": 1000,
+            "images": ["./assets/images/products/perfume.jpg", "./assets/images/products/perfume.jpg"],
+            "product-description": "Floral and elegant fragrance with a long-lasting essence made for every woman."
+          },
+          {
+            "id": "22",
+            "category": "belt",
+            "name": "Men's Leather Reversible Belt",
+            "rating": 0,
+            "price": 204,
+            "originalPrice": 1000,
+            "images": ["./assets/images/products/belt.jpg", "./assets/images/products/belt.jpg"],
+            "product-description": "Two-in-one premium leather belt with a rotating buckle for formal and casual looks."
+          },
+          
+          {
+            "id": "23",
+            "category": "jewellery",
+            "name": "Platinum Zircon Classic Ring",
+            "rating": 0,
+            "price": 602,
+            "originalPrice": 6005,
+            "images": ["./assets/images/products/jewellery-2.jpg", "./assets/images/products/jewellery-2.jpg"],
+            "product-description": "Elegant platinum ring adorned with sparkling zircon stones. Perfect for anniversaries or daily glam."
+          },
+          {
+            "id": "24",
+            "category": "cosmetics",
+            "name": "Shampoo Conditioner Packs",
+            "rating": 0,
+            "price": 200,
+            "originalPrice": 3000,
+            "images": ["./assets/images/products/shampoo.jpg", "./assets/images/products/shampoo.jpg"],
+            "product-description": "A nourishing shampoo and conditioner combo that revitalizes your hair with every wash."
+          },
+          {
+            "id": "25",
+            "category": "jewellery",
+            "name": "Rose Gold Peacock Earrings",
+            "rating": 0,
+            "price": 200,
+            "originalPrice": 3000,
+            "images": ["./assets/images/products/jewellery-1.jpg", "./assets/images/products/jewellery-1.jpg"],
+            "product-description": "Graceful earrings inspired by peacock feathers with a rose gold finish. Elegant and eye-catching."
+          },
+          {
+            "id": "26",
+            "category": "shoes",
+            "name": "Baby Fabric Shoes",
+            "rating": 5,
+            "price": 400,
+            "originalPrice": 5000,
+            "images": ["./assets/images/products/1.jpg", "./assets/images/products/1.jpg"],
+            "product-description": "Soft, breathable, and comfy shoes for babies. Designed with care for tiny growing feet."
+          },
+          {
+            "id": "27",
+            "category": "clothes",
+            "name": "Men's Hoodies T-Shirt",
+            "rating": 4.5,
+            "price": 700,
+            "originalPrice": 10070,
+            "images": ["./assets/images/products/2.jpg", "./assets/images/products/2.jpg"],
+            "product-description": "Trendy hoodie-style t-shirt for men. Blends casual and sporty for all-day comfort."
+          },
+          {
+            "id": "28",
+            "category": "clothes",
+            "name": "Girls T-Shirt",
+            "rating": 4.5,
+            "price": 300,
+            "originalPrice": 5000,
+            "images": ["./assets/images/products/3.jpg", "./assets/images/products/3.jpg"],
+            "product-description": "Colorful and cheerful t-shirt for girls, made with soft cotton for everyday play."
+          }
+          
+  ]
+  

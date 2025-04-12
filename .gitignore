@@ -1,9 +1,6 @@
 # Firebase CLI cache and local state
 .firebase/
 
-# Ignore public static files
-/public/
-
 # dotenv environment variable files
 .env
 .env.development.local

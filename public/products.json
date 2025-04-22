@@ -1,0 +1,553 @@
+[
+  {
+    "id": "1",
+    "category": "jacket",
+    "name": "Mens Winter Leathers Jackets",
+    "rating": 3,
+    "price": 899,
+    "originalPrice": 4000,
+    "images": [
+      "./assets/images/products/jacket-3.jpg",
+      "./assets/images/products/jacket-4.jpg"
+    ],
+    "badge": "15%",
+    "product-description": "Stylish and warm leather jacket perfect for winter. Offers comfort and durability with a classic look."
+  },
+  {
+    "id": "2",
+    "category": "shirt t-shirt tshirt",
+    "name": "Pure Garment Women Cotton Shirt",
+    "rating": 3,
+    "price": 499,
+    "originalPrice": 999,
+    "images": [
+      "./assets/images/products/shirt-1.jpg",
+      "./assets/images/products/shirt-2.jpg"
+    ],
+    "badge": "sale",
+    "product-description": "Soft cotton shirt with garment-dyed finish for a vintage look. Ideal for everyday wear."
+  },
+  {
+    "id": "3",
+    "category": "jacket",
+    "name": "MEN Yarn Fleece Full-Zip Jacket",
+    "rating": 3,
+    "price": 589,
+    "originalPrice": 1299,
+    "images": [
+      "./assets/images/products/jacket-5.jpg",
+      "./assets/images/products/jacket-6.jpg"
+    ],
+    "badge": "sale",
+    "product-description": "Comfortable fleece jacket with full-zip design. Keeps you warm during cold weather activities."
+  },
+  {
+    "id": "4",
+    "category": "skirt",
+    "name": "Black Women Wrap Midi Skirt",
+    "rating": 5,
+    "price": 399,
+    "originalPrice": 399,
+    "images": [
+      "./assets/images/products/clothes-3.jpg",
+      "./assets/images/products/clothes-4.jpg"
+    ],
+    "badge": "new",
+    "product-description": "Elegant wrap skirt with floral prints. Perfect for casual outings and semi-formal events."
+  },
+  {
+    "id": "5",
+    "category": "casual",
+    "name": "Casual Men's Brown shoes",
+    "rating": 5,
+    "price": 999,
+    "originalPrice": 1199,
+    "images": [
+      "./assets/images/products/shoe-2.jpg",
+      "./assets/images/products/shoe-2_1.jpg"
+    ],
+    "badge": "25%",
+    "product-description": "Classic brown shoes crafted for comfort and style. Perfect for casual day-to-day wear."
+  },
+  {
+    "id": "6",
+    "category": "watches womens",
+    "name": "Pocket Watch Leather Pouch",
+    "rating": 3,
+    "price": 299,
+    "originalPrice": 599,
+    "images": [
+      "./assets/images/products/watch-3.jpg",
+      "./assets/images/products/watch-4.jpg"
+    ],
+    "badge": "sale",
+    "product-description": "Vintage-inspired pocket watch with a premium leather pouch. A timeless fashion accessory."
+  },
+  {
+    "id": "7",
+    "category": "watches womens electronics",
+    "name": "Smart watch Vital Plus",
+    "rating": 4,
+    "price": 1199,
+    "originalPrice": 2999,
+    "images": [
+      "./assets/images/products/watch-1.jpg",
+      "./assets/images/products/watch-2.jpg"
+    ],
+    "badge": "55%",
+    "product-description": "Feature-rich smart watch with health tracking and notifications. Sleek design and durable build."
+  },
+  {
+    "id": "8",
+    "category": "party wear",
+    "name": "Womens Party Wear Shoes",
+    "rating": 3,
+    "price": 1199,
+    "originalPrice": 4999,
+    "images": [
+      "./assets/images/products/party-wear-1.jpg",
+      "./assets/images/products/party-wear-2.jpg"
+    ],
+    "badge": "sale",
+    "product-description": "Elegant and stylish shoes perfect for parties and events. Comfortable fit with a sparkling finish."
+  },
+  {
+    "id": "9",
+    "category": "jacket",
+    "name": "Mens Winter Leathers Jackets",
+    "rating": 4,
+    "price": 899,
+    "originalPrice": 4000,
+    "images": [
+      "./assets/images/products/jacket-1.jpg",
+      "./assets/images/products/jacket-2.jpg"
+    ],
+    "badge": "70%",
+    "product-description": "A rugged winter leather jacket offering warmth and a classic edge to your winter wardrobe."
+  },
+  {
+    "id": "10",
+    "category": "sports",
+    "name": "Trekking & Running Shoes - womens",
+    "rating": 3,
+    "price": 519,
+    "originalPrice": 1299,
+    "images": [
+      "./assets/images/products/sports-2.jpg",
+      "./assets/images/products/sports-4.jpg"
+    ],
+    "badge": "sale",
+    "product-description": "Multi-purpose shoes built for trekking and running. Lightweight and built for performance."
+  },
+  {
+    "id": "11",
+    "category": "formal",
+    "name": "Men's Leather Formal Wear shoes",
+    "rating": 4,
+    "price": 500,
+    "originalPrice": 665,
+    "images": [
+      "./assets/images/products/shoe-1.jpg",
+      "./assets/images/products/shoe-1_1.jpg"
+    ],
+    "badge": "new",
+    "product-description": "Elegant leather formal shoes for men. Perfect choice for office, meetings, or events."
+  },
+  {
+      "id": "13",
+      "category": "clothes tshirt",
+      "name": "Relaxed Short full Sleeve T-Shirt",
+      "rating": 0,
+      "price": 400,
+      "originalPrice": 1000,
+      "images": ["./assets/images/products/clothes-1.jpg", "./assets/images/products/clothes-1.jpg"],
+      "badge": "trending",
+      "product-description": "A soft, breathable cotton T-shirt with a relaxed fit. Ideal for everyday wear."
+    },
+    {
+      "id": "14",
+      "category": "clothes women",
+      "name": "Girls pink Embro design Top",
+      "rating": 0,
+      "price": 600,
+      "originalPrice": 900,
+      "images": ["./assets/images/products/clothes-2.jpg", "./assets/images/products/clothes-2.jpg"],
+      "badge": "trending",
+      "product-description": "Stylish embroidered pink top designed for comfort and a perfect festive look."
+    },
+    {
+      "id": "15",
+      "category": "sports",
+      "name": "Running & Trekking Shoes - Womens",
+      "rating": 0,
+      "price": 499,
+      "originalPrice": 999,
+      "images": ["./assets/images/products/sports-1.jpg","./assets/images/products/sports-1.jpg"],
+      "badge": "trending",
+      "product-description": "Durable white trekking shoes made for adventure with maximum grip and support."
+    },
+    {
+      "id": "16",
+      "category": "accessories",
+      "name": "Woolen Hat for Men",
+      "rating": 5,
+      "price": 1149,
+      "originalPrice": 1899,
+      "images": ["./assets/images/products/4.jpg", "./assets/images/products/4.jpg"],
+      "badge": "trending",
+      "product-description": "Warm and stylish woolen hat designed for cold weather and street style."
+    },
+    {
+      "id": "17",
+      "category": "sports",
+      "name": "Sports Claw Women's Shoes",
+      "rating": 0,
+      "price": 549,
+      "originalPrice": 799,
+      "images": ["./assets/images/products/sports-3.jpg", "./assets/images/products/sports-3.jpg"],
+      "badge": "trending",
+      "product-description": "Lightweight and high-performance shoes built for intense athletic activity."
+    },
+    {
+      "id": "18",
+      "category": "sports",
+      "name": "Air Trekking Shoes - Womens",
+      "rating": 0,
+      "price": 1299,
+      "originalPrice": 5499,
+      "images": ["./assets/images/products/sports-6.jpg", "./assets/images/products/sports-6.jpg"],
+      "badge": "trending",
+      "product-description": "Air-cushioned trekking shoes that combine breathability and rugged traction."
+    },
+    {
+      "id": "19",
+      "category": "boots",
+      "name": "Boot With Womens Detail",
+      "rating": 0,
+      "price": 200,
+      "originalPrice": 3000,
+      "images": ["./assets/images/products/shoe-3.jpg", "./assets/images/products/shoe-3.jpg"],
+      "badge": "trending",
+      "product-description": "Elegant boots with suede detailing perfect for casual and semi-formal wear."
+    },
+    {
+      "id": "20",
+      "category": "jewellery womens",
+      "name": "Silver Deer Heart Necklace",
+      "rating": 0,
+      "price": 3999,
+      "originalPrice": 7299,
+      "images": ["./assets/images/products/jewellery-3.jpg", "./assets/images/products/jewellery-3.jpg"],
+      "badge": "trending",
+      "product-description": "Romantic heart-shaped pendant with a deer design in sterling silver finish."
+    },
+    {
+      "id": "21",
+      "category": "perfume",
+      "name": "Titan 100 Ml Womens Perfume",
+      "rating": 0,
+      "price": 429,
+      "originalPrice": 1000,
+      "images": ["./assets/images/products/perfume.jpg", "./assets/images/products/perfume.jpg"],
+      "badge": "69%",
+      "product-description": "Floral and elegant fragrance with a long-lasting essence made for every woman."
+    },
+    {
+      "id": "22",
+      "category": "belt",
+      "name": "Men's Leather Reversible Belt",
+      "rating": 0,
+      "price": 220,
+      "originalPrice": 600,
+      "images": ["./assets/images/products/belt.jpg", "./assets/images/products/belt.jpg"],
+      "badge": "45%",
+      "product-description": "Two-in-one premium leather belt with a rotating buckle for formal and casual looks."
+    },
+    
+    {
+      "id": "23",
+      "category": "jewellery womens",
+      "name": "Platinum Zircon Classic Ring",
+      "rating": 0,
+      "price": 5999,
+      "originalPrice": 12199,
+      "images": ["./assets/images/products/jewellery-2.jpg", "./assets/images/products/jewellery-2.jpg"],
+      "badge": "trending",
+      "product-description": "Elegant platinum ring adorned with sparkling zircon stones. Perfect for anniversaries or daily glam."
+    },
+    {
+      "id": "24",
+      "category": "cosmetics womens",
+      "name": "Shampoo Conditioner Packs",
+      "rating": 0,
+      "price": 200,
+      "originalPrice": 3000,
+      "images": ["./assets/images/products/shampoo.jpg", "./assets/images/products/shampoo.jpg"],
+      "badge": "trending",
+      "product-description": "A nourishing shampoo and conditioner combo that revitalizes your hair with every wash."
+    },
+    {
+      "id": "25",
+      "category": "jewellery womens",
+      "name": "Rose Gold Peacock Earrings",
+      "rating": 0,
+      "price": 200,
+      "originalPrice": 3000,
+      "images": ["./assets/images/products/jewellery-1.jpg", "./assets/images/products/jewellery-1.jpg"],
+      "badge": "Lowest price till now",
+      "product-description": "Graceful earrings inspired by peacock feathers with a rose gold finish. Elegant and eye-catching."
+    },
+    {
+      "id": "26",
+      "category": "shoes",
+      "name": "Baby Fabric Shoes",
+      "rating": 5,
+      "price": 400,
+      "originalPrice": 1800,
+      "images": ["./assets/images/products/1.jpg", "./assets/images/products/1.jpg"],
+      "badge": "Lowest price till now",
+      "product-description": "Soft, breathable, and comfy shoes for babies. Designed with care for tiny growing feet."
+    },
+    {
+      "id": "27",
+      "category": "clothes tshirt shirt",
+      "name": "Men's Hoodies T-Shirt",
+      "rating": 4.5,
+      "price": 899,
+      "originalPrice": 2199,
+      "images": ["./assets/images/products/2.jpg", "./assets/images/products/2.jpg"],
+      "badge": "Lowest price till now",
+      "product-description": "Trendy hoodie-style t-shirt for men. Blends casual and sporty for all-day comfort."
+    },
+    {
+      "id": "28",
+      "category": "clothes womens tshirt shirt",
+      "name": "Girls T-Shirt",
+      "rating": 4.5,
+      "price": 300,
+      "originalPrice": 500,
+      "images": ["./assets/images/products/3.jpg", "./assets/images/products/3.jpg"],
+      "badge": "Lowest price till now",
+      "product-description": "Colorful and cheerful t-shirt for girls, made with soft cotton for everyday play."
+    },
+    {
+      "id": "29",
+      "category": "clothes",
+      "name": "Men's Denim jeans shorts",
+      "rating": 4,
+      "price": 349,
+      "originalPrice": 1299,
+      "images": ["./assets/images/products/short-1.png", "./assets/images/products/short-2.png"],
+      "badge": "Lowest price till now",
+      "product-description": "Classic blue denim shorts crafted for everyday comfort. "
+    },
+    {
+      "id": "30",
+      "category": "clothes",
+      "name": "Slim Fit Stretch Jeans shorts",
+      "rating": 5,
+      "price": 799,
+      "originalPrice": 2499,
+      "images": ["./assets/images/products/jeans-1.png", "./assets/images/products/jeans-2.png"],
+      "badge": "Lowest price till now",
+      "product-description": "Upgrade your wardrobe with these slim fit stretch jeans."
+    },
+    {
+      "id": "31",
+      "category": "makeup womens cosmetics",
+      "name": "Blue Heaven Makeup Kit",
+      "rating": 4,
+      "price": 349,
+      "originalPrice": 999,
+      "images": ["./assets/images/products/makeup-1.png", "./assets/images/products/makeup-2.png"],
+      "badge": "new",
+      "product-description": "Complete women’s makeup kit by Blue Heaven – includes essentials for eyes, lips, and face."
+    },
+    {
+      "id": "32",
+      "category": "accessories",
+      "name": "Women's Stylish Leather Wallet Purse",
+      "rating": 4,
+      "price": 299,
+      "originalPrice": 799,
+      "images": ["./assets/images/products/wallet-1.png", "./assets/images/products/wallet-2.png"],
+      "badge": "Trending",
+      "product-description": "Trendy and compact leather wallet for women – perfect for storing cash, cards, and coins."
+    },
+    {
+      "id": "33",
+      "category": "fragrance",
+      "name": "Men's Aqua Fresh Perfume Spray",
+      "rating": 4,
+      "price": 349,
+      "originalPrice": 999,
+      "images": ["./assets/images/products/aqua-1.png", "./assets/images/products/aqua-2.png"],
+      "badge": "Trending",
+      "product-description": "Refreshing aqua-scented perfume spray for men. Long-lasting fragrance with cool, oceanic vibes."
+    },
+    {
+      "id": "34",
+      "category": "fragrance womens",
+      "name": "Bella Vita Organic Perfume Long Lasting",
+      "rating": 5,
+      "price": 399,
+      "originalPrice": 1499,
+      "images": ["./assets/images/products/bellavita-1.png", "./assets/images/products/bellavita-2.png"],
+      "badge": "Sale",
+      "product-description": "Bella Vita Organic perfume offers a luxurious long-lasting fragrance for both men and women."
+    },
+    {
+      "id": "35",
+      "category": "fragrance",
+      "name": "Roadster Men's Deodorant Perfume Spray",
+      "rating": 4,
+      "price": 299,
+      "originalPrice": 899,
+      "images": ["./assets/images/products/roadster-1.png", "./assets/images/products/roadster-2.png"],
+      "badge": "Lowest price till now",
+      "product-description": "Roadster men's deodorant body spray with a bold, masculine scent. "
+    },
+    {
+      "id": "36",
+      "category": "fragrance",
+      "name": "Midnight Bloom Women's Perfume Spray",
+      "rating": 4,
+      "price": 349,
+      "originalPrice": 999,
+      "images": ["./assets/images/products/midnight-1.png", "./assets/images/products/midnight-2.png"],
+      "badge": "Sale",
+      "product-description": "Midnight Bloom perfume for women with a deep, floral, and musky scent."
+    },
+    {
+      "id": "37",
+      "category": "fragrance Womens",
+      "name": "Fastrack Pulse Unisex Perfume Spray",
+      "rating": 4,
+      "price": 499,
+      "originalPrice": 1299,
+      "images": ["./assets/images/products/fastrack-1.png", "./assets/images/products/fastrack-2.png"],
+      "badge": "Lowest price till now",
+      "product-description": "Fastrack Pulse is a bold and fresh men's perfume with notes of citrus, musk, and woods."
+    },
+    {
+      "id": "38",
+      "category": "essentials womens",
+      "name": "Aroma Room Freshener Perfume Spray",
+      "rating": 4,
+      "price": 179,
+      "originalPrice": 399,
+      "images": ["./assets/images/products/freshner-1.png", "./assets/images/products/freshner-2.png"],
+      "badge": "Lowest price till now",
+      "product-description": "Transform your space with Aroma Room Freshener. Instantly eliminates odors and fills your room."
+    },
+    {
+      "id": "39",
+      "category": "accessories mens specs eyewear eye-wear",
+      "name": "Classic Aviator Sunglasses",
+      "rating": 5,
+      "price": 799,
+      "originalPrice": 1499,
+      "images": ["./assets/images/products/m-glass-1.png", "./assets/images/products/m-glass-2.png"],
+      "badge": "Best Seller",
+      "product-description": "Elevate your style with these timeless aviator sunglasses. Perfect for casual and formal looks alike."
+    },
+    {
+      "id": "40",
+      "category": "accessories womens specs eyewear eye-wear",
+      "name": "Retro Round Sunglasses",
+      "rating": 4,
+      "price": 649,
+      "originalPrice": 1299,
+      "images": ["./assets/images/products/w-glass-1.png", "./assets/images/products/w-glass-2.png"],
+      "badge": "Trending Now",
+      "product-description": "Add a vintage vibe to your outfit with these chic retro round sunglasses, crafted for comfort and style."
+    },
+    {
+      "id": "41",
+      "category": "accessories specs eyewear eye-wear",
+      "name": "Sporty Polarized Sunglasses",
+      "rating": 4,
+      "price": 999,
+      "originalPrice": 1899,
+      "images": ["./assets/images/products/eyewear-1.png", "./assets/images/products/eyewear-2.png"],
+      "badge": "Editor's Pick",
+      "product-description": "Designed for adventure, these sporty polarized sunglasses offer superior UV protection and a bold look."
+    },
+    {
+      "id": "42",
+      "category": "electronics",
+      "name": "Smart LED TV 43 inch 4K UHD",
+      "rating": 5,
+      "price": 25999,
+      "originalPrice": 39999,
+      "images": ["./assets/images/products/tv_1-1.png", "./assets/images/products/tv_1-2.png"],
+      "badge": "Hot Deal",
+      "product-description": "Experience stunning 4K visuals and smart connectivity with this 43 inch Smart LED TV"
+    },
+    {
+      "id": "43",
+      "category": "electronics",
+      "name": "Ultra HD Android TV 55 inch",
+      "rating": 4,
+      "price": 36999,
+      "originalPrice": 52999,
+      "images": ["./assets/images/products/tv_2-1.png", "./assets/images/products/tv_2-2.png"],
+      "badge": "Limited Time Offer",
+      "product-description": "Bring cinematic brilliance home with this 55 inch Ultra HD Android TV."
+    },
+    {
+      "id": "44",
+      "category": "electronics accessories",
+      "name": "Wireless Ergonomic Mouse",
+      "rating": 4,
+      "price": 599,
+      "originalPrice": 999,
+      "images": ["./assets/images/products/mouse-1.png", "./assets/images/products/mouse-2.png"],
+      "badge": "Top Pick",
+      "product-description": "Enhance your workflow with this wireless ergonomic mouse."
+    },
+    {
+      "id": "45",
+      "category": "electronics",
+      "name": "All-in-One Desktop PC i5 12th Gen",
+      "rating": 5,
+      "price": 48999,
+      "originalPrice": 59999,
+      "images": ["./assets/images/products/desktop-1.png", "./assets/images/products/desktop-2.png"],
+      "badge": "Editor’s Choice",
+      "product-description": "Powerful and space-saving All-in-One desktop with Intel i5, ideal for home and office productivity."
+    },
+    {
+      "id": "46",
+      "category": "electronics",
+      "name": "Slim Laptop Ryzen 5 8GB 512GB SSD",
+      "rating": 4,
+      "price": 42999,
+      "originalPrice": 56999,
+      "images": ["./assets/images/products/laptop-1.png", "./assets/images/products/laptop-2.png"],
+      "badge": "Best Value",
+      "product-description": "Lightweight laptop with Ryzen 5, fast SSD storage, and full-day battery—perfect for students and professionals."
+    },
+    {
+      "id": "47",
+      "category": "electronics accessories",
+      "name": "Wireless Earphone Headphones",
+      "rating": 4,
+      "price": 1999,
+      "originalPrice": 2999,
+      "images": ["./assets/images/products/headphone-1.png", "./assets/images/products/headphone-2.png"],
+      "badge": "Customer Favorite",
+      "product-description": "Enjoy immersive sound with these wireless over-ear headphones.20+ hour battery life."
+    },
+    {
+      "id": "48",
+      "category": "cosmetics womens bodywash body-wash",
+      "name": "Herbal Moisturizing Body Wash",
+      "rating": 4,
+      "price": 249,
+      "originalPrice": 449,
+      "images": ["./assets/images/products/bodywash-1.png", "./assets/images/products/bodywash-2.png"],
+      "badge": "New Arrival",
+      "product-description": "Gentle and refreshing herbal body wash that cleanses and nourishes your skin with every shower."
+    }    
+]

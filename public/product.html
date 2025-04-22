@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <style>
+        .product-main {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+            }
+
+            .product-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .product-image {
+            flex: 3;
+            }
+
+            .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            }
+
+            .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-img {
+            min-width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: none;
+            border-radius: 12px;
+            }
+
+            .carousel-img.active {
+            display: block;
+            }
+
+            .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            }
+
+            .carousel-btn {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 0 10px;
+            }
+
+            .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+            }
+
+            .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            }
+
+            .dot.active {
+            background-color: #333;
+            }
+
+            .product-details {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }
+
+            .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            }
+
+            .product-category {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 10px;
+            }
+
+            .product-price {
+            font-size: 22px;
+            color: #e53935;
+            margin-bottom: 15px;
+            }
+
+            .product-price del {
+            color: #999;
+            font-size: 18px;
+            margin-left: 8px;
+            }
+
+            .product-description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            }
+
+            /* .product-buttons .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-right: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            } */
+            .product-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+            }
+
+            .product-buttons .btn {
+            flex: 1; 
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            }
+
+            .add-to-bag {
+            background-color: #333;
+            }
+
+            .buy-now {
+            background-color: #ff3e6c;
+            }
+
+
+            .add-to-bag {
+            background-color: #1976d2;
+            color: white;
+            }
+
+            .add-to-bag:hover {
+            background-color: #1565c0;
+            }
+
+            .buy-now {
+            background-color: #ff5722;
+            color: white;
+            }
+
+            .buy-now:hover {
+            background-color: #e64a19;
+            }
+
+            @media (max-width: 1024px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-image,
+            .product-details {
+                width: 100%;
+            }
+
+            .carousel-img {
+                max-height: 400px;
+            }
+            }
+
+            @media (max-width: 768px) {
+            .product-title {
+                font-size: 22px;
+            }
+
+            .product-price {
+                font-size: 20px;
+            }
+
+            .product-description {
+                font-size: 15px;
+            }
+
+            .product-buttons .btn {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+
+            .carousel-img {
+                max-height: 300px;
+            }
+
+            .carousel-btn {
+                font-size: 24px;
+                padding: 6px;
+            }
+            }
+
+            @media (max-width: 480px) {
+            .product-main {
+                padding: 20px 10px;
+            }
+
+            .product-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .carousel-dots {
+                display: none; /* optional for tiny screens */
+            }
+
+            .product-title {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .product-details {
+                text-align: center;
+            }
+            }
+
+            /* delivery */
+
+            .delivery-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            margin: 20px 0;
+            font-family: 'Segoe UI', sans-serif;
+            }
+
+            .deliver-to {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            }
+
+            .deliver-to .icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0.8;
+            }
+
+            .pincode-input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 120px;
+            }
+
+            .check-btn {
+            background-color: #2874f0;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            }
+
+            .delivery-details {
+            margin-bottom: 15px;
+            }
+
+            .delivery-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-size: 15px;
+            }
+
+            .delivery-row .icon {
+            width: 22px;
+            height: 22px;
+            opacity: 0.7;
+            }
+
+            .free-tag {
+            color: green;
+            font-weight: 600;
+            margin-left: 6px;
+            }
+
+            .price {
+            color: #888;
+            font-size: 13px;
+            margin-left: 6px;
+            }
+
+            .order-cutoff {
+            color: #555;
+            font-size: 13px;
+            margin-left: 32px;
+            }
+
+            .services {
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            }
+
+            .service-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            }
+
+            .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            }
+
+            .service-list .icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0.8;
+            }
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-top">
+
+            <div class="container">
+      
+                <ul class="header-social-container">
+
+                    <li>
+                      <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                      </a>
+                    </li>
+          
+                    <li>
+                      <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                      </a>
+                    </li>
+          
+                    <li>
+                      <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                      </a>
+                    </li>
+          
+                    <li>
+                      <a href="#" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                      </a>
+                    </li>
+          
+                  </ul>
+      
+              <div class="header-alert-news">
+                <p>
+                  <b>Free Shipping</b>
+                  This Week Order Over - ₹500
+                </p>
+              </div>
+      
+            </div>
+      
+          </div>
+
+          <div class="header-main">
+
+            <div class="container">
+      
+              <a href="#" class="header-logo">
+                <img src="./assets/images/logo/myntra_nobg.png" alt="Myntra's logo" width="110" height="52">
+              </a>
+      
+              <!-- made the seach bar to search for type items -->
+              <form class="header-search-container" action="./search.html" method="GET">
+
+                <input
+                  type="search"
+                  name="q"
+                  class="search-field"
+                  placeholder="Enter your product name..."
+                  required
+                >
+              
+                <button type="submit" class="search-btn">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              
+              </form>
+      
+              <div class="header-user-actions">
+      
+                <a href="./index.html">
+                  <button class="action-btn">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </button>
+                </a>
+      
+                <a href="./cart.html">
+                  <button class="action-btn">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </a>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+
+    </header>
+<main>
+<main class="product-main">
+  <div class="product-container">
+    <!-- LEFT: Carousel/Image -->
+    <div class="product-image">
+
+      <div class="carousel-container">
+        <div class="carousel"></div>
+      
+        <div class="carousel-controls">
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- RIGHT: Product Details -->
+    <div class="product-details">
+        <h2 class="product-title"></h2>
+        <p class="product-category"></p>
+        <p class="product-price"></p>
+        
+      <p class="product-description"></p>
+      <div class="product-buttons">
+        <!-- for adding it to cart -->
+        <button class="btn add-to-bag" id="addToCartBtn">Add to Bag</button>
+        <button class="btn buy-now">Buy Now</button>
+      </div>
+
+      
+      <!-- delivery -->
+
+      <div>
+        <div class="delivery-section">
+            <!-- Deliver To -->
+            <div class="deliver-to">
+              <!-- <img src="https://www.svgrepo.com/show/451882/location-pin.svg" alt="Location Icon" class="icon"> -->
+              <span class="label">Deliver to</span>
+              <input type="text" maxlength="6" placeholder="Enter pincode" class="pincode-input">
+              <button class="check-btn">Check</button>
+            </div>
+          
+            <!-- Delivery Info -->
+            <div class="delivery-details">
+              <div class="delivery-row">
+                <!-- <img src="https://www.svgrepo.com/show/499563/truck.svg" alt="Truck Icon" class="icon"> -->
+                <span class="delivery-text">
+                  Delivery by <strong>13 Apr, Sunday</strong> | <span class="free-tag">Free</span> <del class="price">₹40</del>
+                </span>
+              </div>
+              <div class="order-cutoff">if ordered before <strong>4:41 PM</strong></div>
+            </div>
+          
+            <!-- Services -->
+            <div class="services">
+              <div class="service-title">Services</div>
+              <ul class="service-list">
+                <li>
+                  <!-- <img src="https://www.svgrepo.com/show/448262/cash.svg" class="icon" alt="Cash Icon"> -->
+                  <span>Cash on Delivery available</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+ </main> 
+
+ <!--
+      - BLOG
+    -->
+
+    <div class="blog">
+
+        <div class="container">
+  
+          <div class="blog-container has-scrollbar">
+  
+            <div class="blog-card">
+  
+              <a href="#">
+                <img src="./assets/images/blog-1.jpg" alt="Clothes Retail KPIs 2025 Guide for Clothes Executives" width="300" class="blog-banner">
+              </a>
+  
+              <div class="blog-content">
+  
+                <a href="#" class="blog-category">Fashion</a>
+  
+                <a href="#">
+                  <h3 class="blog-title">Clothes Retail KPIs 2025 Guide for Clothes Executives.</h3>
+                </a>
+  
+                <p class="blog-meta">
+                  By <cite>Mr Admin</cite> / <time datetime="2025-04-06">Apr 06, 2025</time>
+                </p>
+  
+              </div>
+  
+            </div>
+  
+            <div class="blog-card">
+            
+              <a href="#">
+                <img src="./assets/images/blog-2.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+            
+              <div class="blog-content">
+            
+                <a href="#" class="blog-category">Clothes</a>
+            
+                <h3>
+                  <a href="#" class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle.</a>
+                </h3>
+            
+                <p class="blog-meta">
+                  By <cite>Mr Robin</cite> / <time datetime="2025-04-18">April 18, 2025</time>
+                </p>
+            
+              </div>
+            
+            </div>
+  
+            <div class="blog-card">
+            
+              <a href="#">
+                <img src="./assets/images/blog-3.jpg" alt="EBT vendors: Claim Your Share of SNAP Online Revenue."
+                  class="blog-banner" width="300">
+              </a>
+            
+              <div class="blog-content">
+            
+                <a href="#" class="blog-category">Shoes</a>
+            
+                <h3>
+                  <a href="#" class="blog-title">EBT vendors: Claim Your Share of SNAP Online Revenue.</a>
+                </h3>
+            
+                <p class="blog-meta">
+                  By <cite>Mr Selsa</cite> / <time datetime="2025-04-10">April 10, 2025</time>
+                </p>
+            
+              </div>
+            
+            </div>
+  
+            <div class="blog-card">
+            
+              <a href="#">
+                <img src="./assets/images/blog-4.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+            
+              <div class="blog-content">
+            
+                <a href="#" class="blog-category">Electronics</a>
+            
+                <h3>
+                  <a href="#" class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle.</a>
+                </h3>
+            
+                <p class="blog-meta">
+                  By <cite>Mr Pawar</cite> / <time datetime="2025-04-15">April 15, 2025</time>
+                </p>
+            
+              </div>
+            
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+
+
+</main>
+
+
+<!--
+    - FOOTER
+  -->
+
+  <footer>
+
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+      
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              419 Guindy Road, Near State Highway 41
+              IITM, Chennai – 600036
+              India
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="https://wa.me/+918099907284" class="footer-nav-link">(+91)-8099907284</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:rs0828772@gmail.com" class="footer-nav-link">rs0828772@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Myntra</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const images = document.querySelectorAll(".carousel-img");
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.querySelector(".carousel-btn.prev");
+    const nextBtn = document.querySelector(".carousel-btn.next");
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+    images.forEach((img, i) => {
+        img.classList.remove("active");
+        dots[i].classList.remove("active");
+        if (i === index) {
+        img.classList.add("active");
+        dots[i].classList.add("active");
+        }
+    });
+    }
+
+    prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+    });
+
+    dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        currentIndex = i;
+        showImage(currentIndex);
+    });
+    });
+
+    // Initial
+    showImage(currentIndex);
+
+</script>
+
+<!-- for dynamically display -->
+
+<script>
+        // Step 1: Get product ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+    
+        // Step 2: Fetch product data
+        fetch('./products.json')
+        .then(res => res.json())
+        .then(products => {
+            const product = products.find(p => p.id === productId);
+    
+            if (!product) {
+            document.querySelector('.product-main').innerHTML = "<p>Product not found.</p>";
+            return;
+        }
+
+        // carousel button working
+
+        let currentIndex = 0;
+
+        function updateCarousel(index) {
+        const images = document.querySelectorAll('.carousel-img');
+        const dots = document.querySelectorAll('.dot');
+
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+
+        currentIndex = index;
+        }
+
+        // Event listeners for prev/next buttons
+        document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+        const images = document.querySelectorAll('.carousel-img');
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel(newIndex);
+        });
+
+        document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+        const images = document.querySelectorAll('.carousel-img');
+        const newIndex = (currentIndex + 1) % images.length;
+        updateCarousel(newIndex);
+        });
+
+        // Event listeners for dots
+        document.querySelectorAll('.dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+            updateCarousel(Number(dot.dataset.index));
+        });
+        });
+
+  
+        // Step 3: Update title, category, price
+        document.querySelector('.product-title').textContent = product.name;
+        document.querySelector('.product-category').textContent = "Category: " + product.category;
+        document.querySelector('.product-price').innerHTML = `₹${product.price} <del>₹${product.originalPrice}</del>`;
+        document.querySelector('.product-description').textContent = product["product-description"];
+
+  
+        // Step 4: Load product images into carousel
+        const carousel = document.querySelector('.carousel');
+        const dots = document.querySelector('.carousel-dots');
+  
+        carousel.innerHTML = ''; 
+        dots.innerHTML = '';     
+  
+        product.images.forEach((imgSrc, index) => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.className = 'carousel-img' + (index === 0 ? ' active' : '');
+          img.alt = `Product Image ${index + 1}`;
+          carousel.appendChild(img);
+  
+          const dot = document.createElement('span');
+          dot.className = 'dot' + (index === 0 ? ' active' : '');
+          dot.dataset.index = index;
+          dots.appendChild(dot);
+        });
+  
+      })
+      .catch(err => {
+        console.error('Error loading product data:', err);
+      });
+
+  </script>
+
+<!-- firebase script -->
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyDp0CHdk8biW5ik8K1jXPl8wvhQKdJGMu8",
+        authDomain: "cron-project-2df3e.firebaseapp.com",
+        projectId: "cron-project-2df3e",
+        storageBucket: "cron-project-2df3e.firebasestorage.app",
+        messagingSenderId: "375009354305",
+        appId: "1:375009354305:web:efc76c29272060c6ecdcc0",
+        measurementId: "G-WL4ZGPM2KF"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    
+
+    let currentProduct; 
+
+    fetch('./products.json')
+    .then(res => res.json())
+    .then(products => {
+        const product = products.find(p => p.id === productId);
+        if (!product) return;
+        
+        currentProduct = product;
+
+        document.querySelector('.buy-now').addEventListener('click', async () => {
+        const confirmBuy = confirm("Are you sure you want to buy this product?");
+        if (!confirmBuy) return;
+
+        try {
+            const docRef = await addDoc(collection(db, "purchases"), {
+            ...product,
+            timestamp: new Date().toISOString()
+            });
+            alert("Purchase successful! Order ID: " + docRef.id);
+        } catch (e) {
+            console.error("Error saving purchase:", e);
+            alert("Something went wrong. Please try again.");
+        }
+        });
+    });
+
+  </script>
+  
+<script>
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+    document.querySelector('.buy-now').addEventListener('click', async () => {
+    const confirmPurchase = confirm("Are you sure you want to buy this product?");
+    if (!confirmPurchase) return;
+
+    const productData = {
+        id: product.id,
+        name: product.name,
+        category: product.category,
+        price: product.price,
+        originalPrice: product.originalPrice,
+        rating: product.rating,
+        description: product["product-description"],
+        images: product.images,
+        timestamp: new Date().toISOString()
+    };
+
+    try {
+        await addDoc(collection(db, "purchases"), productData);
+        alert("Purchase confirmed! Data saved to Firebase.");
+    } catch (e) {
+        console.error("Error adding document: ", e);
+        alert("Failed to store data.");
+    }
+    });
+
+
+</script>
+
+<!-- for adding to cart -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addToCartBtn = document.getElementById('addToCartBtn');
+    const productId = new URLSearchParams(window.location.search).get('id');
+
+    // Check if already in cart and update button immediately
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.some(item => item.id === productId)) {
+      addToCartBtn.textContent = 'Go to Bag';
+      addToCartBtn.classList.add('go-to-bag');
+    }
+
+    addToCartBtn.addEventListener('click', () => {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // If already in cart, redirect to cart
+      if (cart.some(item => item.id === productId)) {
+        window.location.href = './cart.html';
+        return;
+      }
+
+      fetch('./products.json')
+        .then(res => res.json())
+        .then(products => {
+          const selectedProduct = products.find(product => product.id === productId);
+
+          if (selectedProduct) {
+            cart.push(selectedProduct);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update button to "Go to Bag"
+            addToCartBtn.textContent = 'Go to Bag';
+            addToCartBtn.classList.add('go-to-bag');
+          } else {
+            alert('Product not found.');
+          }
+        })
+        .catch(err => console.error('Error fetching product:', err));
+    });
+  });
+</script>
+
+
+  
+</body>
+</html>   

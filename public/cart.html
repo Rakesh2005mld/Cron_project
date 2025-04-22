@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    }
+
+    h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: #222;
+    }
+
+    .cart-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: auto;
+    }
+
+    .showcase {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    }
+
+    .showcase:hover {
+    transform: translateY(-4px);
+    }
+
+    .showcase-img-box {
+    margin-right: 1rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    }
+
+    .showcase-img {
+    width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    }
+
+    .showcase-content {
+    flex: 1;
+    }
+
+    .showcase-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+    text-decoration: none;
+    }
+
+    .showcase-category {
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    }
+
+    .price-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    }
+
+    .price-box .price {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1rem;
+    }
+
+    .price-box del {
+    color: #999;
+    font-size: 0.9rem;
+    }
+
+    .remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .remove-btn:hover {
+    background-color: #c0392b;
+    }
+
+    #cartTotal {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-top: 2px solid #ddd;
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+/* for shop now button */
+.shop-now-btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.shop-now-btn:hover {
+  background-color: #ff3b2e;
+  transform: scale(1.05);
+}
+
+
+  </style>
+
+</head>
+<body>
+
+    <div style="display: flex; align-items: center; justify-content: center; padding: 1rem; background-color: #f8f9fa; border-bottom: 1px solid #ddd;">
+        <img src="./assets/images/logo/myntra_nobg.png" alt="Logo" style="height: 40px; margin-right: 1rem;">
+        <h2 style="margin: 0; font-size: 1.8rem; font-weight: 600; color: #333;">My Shopping Bag</h2>
+      </div>
+      
+  <div id="cartContainer" class="cart-grid" style="padding: 1rem;"></div>
+  <div id="cartTotal" style="padding: 1rem; border-top: 1px solid #ccc; margin-top: 2rem;">
+    <h3>Total:</h3>
+    <p id="totalPrice">₹0.00</p>  
+  </div>
+
+  <div style="display: flex; justify-content: center; text-align: right; margin-top: 1rem; gap:15px; padding-bottom: 20px;">
+    <button id="placeOrderBtn" class="btn" style="padding: 0.75rem 1.5rem; background-color: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
+      Place Order
+    </button>
+    <a href="./search.html?q=men"><button class="shop-now-btn">Shop More</button></a>
+  </div>
+  
+
+
+<!-- script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartContainer = document.getElementById('cartContainer');
+      const totalContainer = document.getElementById('totalPrice');
+  
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let total = 0;
+  
+      if (cart.length === 0) {
+        cartContainer.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100px; text-align: center;">
+                <p style="font-size: 1.5rem; color: #555; margin-bottom: 20px;">👜 Your bag is empty.</p>
+            </div>
+            `;
+
+      } else {
+        cart.forEach(product => {
+          const div = document.createElement('div');
+          div.classList.add('showcase');
+          div.innerHTML = `
+            <a href="./product.html?id=${product.id}" class="showcase-img-box">
+              <img src="${product.images[0]}" alt="${product.name}" width="70" class="showcase-img">
+            </a>
+            <div class="showcase-content">
+              <a href="./product.html?id=${product.id}">
+                <h4 class="showcase-title">${product.name}</h4>
+              </a>
+              <a href="./product.html?id=${product.id}" class="showcase-category">${product.category}</a>
+              <div class="price-box">
+                <p class="price">₹${product.price}</p>
+                <del>₹${product.originalPrice}</del>
+              </div>
+              <button class="btn remove-btn" data-id="${product.id}">Remove</button>
+            </div>
+          `;
+          cartContainer.appendChild(div);
+  
+          // Add price to total (ensuring it's treated as a number)
+          total += parseFloat(product.price);
+          
+        });
+      }
+  
+      totalContainer.textContent = `₹${total.toFixed(2)}`;
+  
+      // Remove product
+      document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const id = button.getAttribute('data-id');
+          const updatedCart = cart.filter(item => item.id !== id);
+          localStorage.setItem('cart', JSON.stringify(updatedCart));
+          location.reload();
+        });
+      });
+    });
+  </script>
+
+  <!-- Firebase SDK -->
+<script type="module">
+    // Import Firebase SDK modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+  
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDp0CHdk8biW5ik8K1jXPl8wvhQKdJGMu8",
+      authDomain: "cron-project-2df3e.firebaseapp.com",
+      projectId: "cron-project-2df3e",
+      storageBucket: "cron-project-2df3e.firebasestorage.app",
+      messagingSenderId: "375009354305",
+      appId: "1:375009354305:web:efc76c29272060c6ecdcc0",
+      measurementId: "G-WL4ZGPM2KF"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // Handle Place Order Button
+    document.getElementById('placeOrderBtn')?.addEventListener('click', async () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      if (cart.length === 0) {
+        alert("Your bag is empty!");
+        return;
+      }
+  
+      const confirmOrder = confirm("Are you sure you want to place the order?");
+      if (!confirmOrder) return;
+  
+      try {
+        // Add timestamp to each product and send each as a document
+        const timestamp = new Date().toISOString();
+  
+        for (const product of cart) {
+          await addDoc(collection(db, "purchases"), {
+            ...product,
+            timestamp
+          });
+        }
+  
+        // Clear cart and show success
+        localStorage.removeItem('cart');
+        alert("Order placed successfully! 🎉");
+        window.location.reload();
+  
+      } catch (error) {
+        console.error("Error placing order:", error);
+        alert("Something went wrong while placing your order.");
+      }
+    });
+  </script>
+  
+  
+
+</body>
+</html>

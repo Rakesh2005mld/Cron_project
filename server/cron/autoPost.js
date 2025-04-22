@@ -10,10 +10,9 @@ function getPublicImageUrl(localPath) {
   
 
 module.exports = function startCron() {
-  // Runs every Tuesday at 5:00 PM
-  cron.schedule('30 11 * * 2', async () => { 
+  // Runs every Tuesday at 6:00 PM
+  cron.schedule('30 12 * * 2', async () => { 
     console.log("Running Auto Post Job...");
-    // console.log("System time:", new Date().toString());
 
     //Getting all purchases
     const snapshot = await db.collection("purchases").get();

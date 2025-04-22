@@ -12,7 +12,7 @@ module.exports = async function postToInstagram(product, caption, imageUrl) {
 
     const productName = product?.name || "Unnamed Product";
 
-    console.log("Posting to Instagram:", {
+    console.log("🔍 Posting to Instagram:", {
       productName,
       caption,
       imageUrl,
@@ -50,18 +50,18 @@ module.exports = async function postToInstagram(product, caption, imageUrl) {
     );
 
     if (publishRes?.data?.id) {
-      console.log(`Posted "${productName}" to Instagram with Post ID: ${publishRes.data.id}`);
+      console.log(`✅ Posted "${productName}" to Instagram with Post ID: ${publishRes.data.id}`);
     } else {
-      console.error("Media was created but failed to publish.");
+      console.error("⚠️ Media was created but failed to publish.");
       console.error("Publish Response:", publishRes?.data || publishRes);
     }
   } catch (error) {
-    console.error("Error posting to Instagram:");
+    console.error("❌ Error posting to Instagram:");
     console.error("Product:", product?.name || "Unknown");
     if (error.response?.data) {
-      console.error("Error Response:", error.response.data);
+      console.error("🔍 Error Response:", error.response.data);
     } else {
-      console.error("Error Message:", error.message);
+      console.error("❗ Error Message:", error.message);
     }
   }
 };

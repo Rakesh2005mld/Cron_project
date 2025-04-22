@@ -10,8 +10,8 @@ function getPublicImageUrl(localPath) {
   
 
 module.exports = function startCron() {
-  // Runs every Tuesday at 6:00 PM
-  cron.schedule('30 12 * * 2', async () => { 
+  // Runs every Tuesday at 6:30 PM
+  cron.schedule('0 13 * * 2', async () => { 
     console.log("Running Auto Post Job...");
 
     //Getting all purchases
